@@ -1,8 +1,9 @@
 import { useState } from "react"
+import { IoMdAdd } from "react-icons/io";
 
 const AddTodo = ({ onNewItem }) => {
-  const [addnewItem, setAddnewItem] = useState()
-  const [addnewDate, setAddnewDate] = useState()
+  const [addnewItem, setAddnewItem] = useState("")
+  const [addnewDate, setAddnewDate] = useState("")
 
   const handleAddnewItem = (event) => {
     setAddnewItem(event.target.value)
@@ -27,7 +28,7 @@ const AddTodo = ({ onNewItem }) => {
           onChange={handleAddnewItem} value={addnewItem}/></div>
           <div className="col-4"><input type="date" name="" id="" onChange={handleAddnewDate} value={addnewDate}/></div>
           <div className="col-2">
-            <button type="button" className="btn btn-success" onClick={handleAddButtonClick}>ADD</button>
+            <button type="button" className="btn btn-success" onClick={handleAddButtonClick}><IoMdAdd /></button>
           </div>
         </div>
       </div>
